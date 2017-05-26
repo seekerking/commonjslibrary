@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Launch Chrome and new instance of Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:9099/index.html",
+            "sourceMaps": true,
+            "webRoot": "E:/文档/学习文档/JavaScript"
+        }
+    ]
+}
