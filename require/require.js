@@ -2155,6 +2155,7 @@ requirejs.config({
     text:'dom/Text/text',
     search:'dom/system/search',
     baseElement:'dom/Element/baseElement',
+    warperElement:'dom/Element/warperElement',
     jquery:'lib/jquery/jquery-3.2.1',
     jquerui:'lib/jquery-ui-1.12.1/jquery-ui.min'
   },

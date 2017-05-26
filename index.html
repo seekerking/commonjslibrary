@@ -4,12 +4,12 @@
     </body>
     <script src="require/require.js"></script>
     <script>
-        require(["baseElement"],function(baseElement)
+        require(["warperElement"],function(baseElement)
         
         {
 
 
-            let element= new baseElement();//此处可以使用jqeury闭包的方法生成对象function(str){return ""};考虑面向对象原则，用new更为容易接受
+            let element= new baseElement("width:300px;height:300px;background-color:red");//此处可以使用jqeury闭包的方法生成对象function(str){return ""};考虑面向对象原则，用new更为容易接受
             element.addEvent("click",function(name){alert(name+"you have clicked");},1);
             element.Ele.style.width="100%";
             element.Ele.style.height="100%";
@@ -17,6 +17,8 @@
             element.Ele.style.border="1px solid #d4d4d4";
             document.body.appendChild(element.Ele);
             element.fireEvent("click",1);
+
+
           // element.fireEvent("click","ck");
         }
         

@@ -165,6 +165,43 @@ define("baseElement",function()
 
          }
       }
+    };
+    //属性赋值
+    this.extendpropertiese=function(destobject,sourceobject)
+    {
+      for (var attr in sourceobject) {
+      if (destobject.hasOwnProperty(attr))
+        {
+
+            destobject[attr]=sourceobject[attr];
+        }
     }
+     return destobject;
+    };
+
+
+    //对象与对象之间的一种继承，实际上有点属性复制的意思
+    this.baseinherit=function(childElement)
+    {
+    if (null == childElement || typeof (childElement)!="object") return childElement;
+
+        if (childElement instanceof Object) {
+                if(this.__proto__)
+                {
+                    childElement.__proto__=this.__proto__;
+                }
+    for (var attr in this) {
+      if (!childElement.hasOwnProperty(attr))
+        {
+
+            childElement[attr]=this.baseinherit(this[attr]);
+        }
+    }
+     return childElement;
+    }}
+     
+
    
-}})
+};
+
+})
